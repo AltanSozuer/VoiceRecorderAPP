@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="nesnem"
+            type="com.example.voicerecorderapplication.MainActivity" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:background="@color/teal_200">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="612dp"
+            android:layout_height="179dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Ses Kaydedici"
+            android:textColor="@color/white"
+            android:textSize="80sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            style="@android:style/Widget.ImageButton"
+            android:layout_width="546dp"
+            android:layout_height="644dp"
+            android:layout_marginTop="220dp"
+            android:background="#FFEB3B"
+            android:elevation="30dp"
+            android:onClick="@{()->nesnem.butonKontrol()}"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:srcCompat="@drawable/ic_baseline_mic_off_24"
+            app:tint="#3F51B5" />
+
+        <Chronometer
+            android:id="@+id/chronometer1"
+            android:layout_width="479dp"
+            android:layout_height="240dp"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="80sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
